@@ -5,8 +5,12 @@ TAG_NAME=test.1.21
 MAKEFILE_DIR=$(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 WORK_DIR=$(MAKEFILE_DIR)
 
+.PHONY:pull.base
+pull.base:
+	docker pull ghcr.io/bearfield/debian-fish:bookworm
+
 .PHONY:test.build
-test.build:
+test.build: pull.base
 	cd $(WORK_DIR)
 	docker build --tag=$(DOCKERHUB_REPONAME)/$(CONTAINER_NAME):$(TAG_NAME) ./docker
 
