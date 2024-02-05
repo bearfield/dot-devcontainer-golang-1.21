@@ -28,7 +28,7 @@
                     "editor.snippetSuggestions": "none",
                     "editor.formatOnSave": true,
                     "editor.codeActionsOnSave": {
-                        "source.organizeImports": true
+                        "source.organizeImports": "explicit"
                     }
                 },
                 "gopls": {
@@ -55,6 +55,9 @@
                 "github.copilot",
                 "bmalehorn.vscode-fish",
                 "github.copilot-chat",
+                "ms-vscode.makefile-tools",
+                "ms-azuretools.vscode-docker",
+                "oderwat.indent-rainbow",
                 "golang.go"
             ]
         }
